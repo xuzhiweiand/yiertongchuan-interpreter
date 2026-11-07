@@ -1,0 +1,10 @@
+{
+  "app": {
+    "bundleName": "com.yiertongchuan.interpreter",
+    "vendor": "yiertongchuan",
+    "versionCode": 1000001,
+    "versionName": "0.2.0",
+    "icon": "$media:app_icon",
+    "label": "$string:app_name"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "app": {
+    // 签名由 DevEco Studio 自动生成：
+    // File → Project Structure → Signing Configs → 勾选 Automatically generate signature。
+    // 当前 bundleName 为 com.yiertongchuan.interpreter，旧签名材料（绑定 com.example.assets）已移除。
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\xuzhiweiand\\.ohos\\config\\default_english_H_zID-XEgvcydDXQpfoyltpGVIOiUUnTCUJ39TWlqZk=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BB5B266AB4CE4DFC778DDA31A95542154B4CFB7EFC3C173335EB2FE4D23E4F1C46F45630B8C53E1",
+          "profile": "C:\\Users\\xuzhiweiand\\.ohos\\config\\default_english_H_zID-XEgvcydDXQpfoyltpGVIOiUUnTCUJ39TWlqZk=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\xuzhiweiand\\.ohos\\config\\default_english_H_zID-XEgvcydDXQpfoyltpGVIOiUUnTCUJ39TWlqZk=.p12",
+          "storePassword": "0000001B31E487E82952FDC115FAF8B7EE27D92BAB16828B60F51580BB8699D566E4C425B9B7D08F728E42"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "26.0.0",
+        "targetSdkVersion": "26.0.0",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

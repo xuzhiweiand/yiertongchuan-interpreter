@@ -1,0 +1,8 @@
+{
+  "modelVersion": "6.1.0",
+  "name": "yiertong-interpreter",
+  "version": "0.2.0",
+  "description": "译耳同传 - 中英实时语音互传",
+  "dependencies": {},
+  "devDependencies": {}
+}

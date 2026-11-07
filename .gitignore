@@ -1,0 +1,23 @@
+# Build outputs
+build/
+entry/build/
+entry/.preview/
+.hvigor/
+.ohos-pkgs/
+oh_modules/
+entry/oh_modules/
+
+# IDE
+.idea/
+*.iml
+
+# Local signing material (never commit)
+signature/
+*.p12
+*.p7b
+*.cer
+local.properties
+
+# Logs
+build.log
+*.log

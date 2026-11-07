@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "译耳同传：中英实时语音互传"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "译耳同传主界面"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "译耳同传"
+    },
+    {
+      "name": "microphone_reason",
+      "value": "需要麦克风权限来实时监听语音并进行翻译"
+    }
+  ]
+}

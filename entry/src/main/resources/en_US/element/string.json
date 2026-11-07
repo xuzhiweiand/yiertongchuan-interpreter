@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "YierTong: real-time Chinese-English voice interpreter"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "YierTong Interpreter"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "YierTong"
+    },
+    {
+      "name": "microphone_reason",
+      "value": "Microphone access is required to listen and interpret speech in real time"
+    }
+  ]
+}
