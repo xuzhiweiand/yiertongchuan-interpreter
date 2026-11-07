@@ -8,7 +8,7 @@
 | APP 备案名称 | **译耳同传** | 必须与应用名称完全一致 |
 | 软著名称 | **译耳同传中英实时互译软件 V1.0** | 全称包含“译耳同传”，满足简称一致要求 |
 | 包名 / bundleName | **`com.yiertongchuan.interpreter`** | 上架/备案后不可修改 |
-| 版本 | `0.2.0`（versionCode `1000001`） | `AppScope/app.json5` |
+| 版本 | `0.2.1`（versionCode `1000002`） | `AppScope/app.json5` |
 | 英文品牌 | `YierTong` | 仅作品牌展示，不作为备案名 |
 | 一句话简介 | 中英实时互传，开口即译 | 应用市场简介，不放进应用名 |
 | 分类 | 工具 / 效率 | 以 AppGallery 实际类目为准 |

@@ -3,7 +3,7 @@
 一款鸿蒙（HarmonyOS）实时同传应用：**持续监听语音 → 自动翻译 → 用目标语言朗读**，全程无需手动操作。
 支持 **中文 → 英文** 与 **英文 → 中文** 双向同传。
 
-> 当前版本：v0.2（中 ↔ 英）。英文识别走百度短语音，其余保持离线 / 可插拔。
+> 当前版本：v0.2.1（中 ↔ 英）。英文识别走百度短语音，其余保持离线 / 可插拔。
 
 ## 代码仓库
 
@@ -24,6 +24,17 @@ GitHub：<https://github.com/xuzhiweiand/yiertongchuan-interpreter>
 - **可插拔翻译**：免注册公共通道 / 百度翻译 / DeepSeek，应用内设置，无需改代码。
 - **界面**：实时字幕、当前译文、历史记录、运行状态与错误提示。
 
+## 应用图标
+
+深海军蓝渐变 + 青色辉光的「听」符号（耳 + 声波），与界面强调色 `#5AD1FF` 一致：
+
+- 预览：[`docs/icon/app-icon-1024.png`](docs/icon/app-icon-1024.png) · 多尺寸效果 [`docs/icon/icon-preview.png`](docs/icon/icon-preview.png)
+- 生成脚本：`scripts/make_icon.py`（Pillow，确定性重建；符号取自 Material Icons，Apache-2.0）
+- 资源落点：
+  - `AppScope/resources/base/media/app_icon.png`（应用图标，1024×1024）
+  - `entry/src/main/resources/base/media/background.png` + `foreground.png`（分层图标，1024×1024）
+  - `entry/src/main/resources/base/media/startIcon.png`（启动页图标，288×288）
+
 ## 英文 → 中文：一次性配置
 
 英文语音识别需要百度智能云的**短语音识别**密钥（与百度翻译的 AppID/密钥不是同一个）：
@@ -39,12 +50,14 @@ GitHub：<https://github.com/xuzhiweiand/yiertongchuan-interpreter>
 
 | 项 | 版本 |
 | --- | --- |
-| DevEco Studio | 26.0（本机 `C:\Program Files\Huawei\DevEco Studio`） |
+| DevEco Studio | 26.0（本机 `D:\Program Files\Huawei\DevEco Studio`，`scripts/build.ps1` 会自动探测） |
 | HarmonyOS SDK | API 26（`sdk/default/openharmony` + `sdk/default/hms`） |
 | 真机 | HarmonyOS 6.0+（本项目在 HUAWEI Pura X，API 26 上开发） |
 | Node | DevEco 自带 `tools/node`（v24） |
 
 ## 真机验证（2026-11-07，HUAWEI Pura X / API 26）
+
+已新增 2026-11-08：v0.2.1（新图标）重新打包，`hdc install -r` 升级安装并启动通过，设备侧 `versionCode 1000002 / versionName 0.2.1`。
 
 已完成一轮真机闭环，关键结论：
 
@@ -67,9 +80,9 @@ GitHub：<https://github.com/xuzhiweiand/yiertongchuan-interpreter>
 或手动执行：
 
 ```powershell
-$env:DEVECO_SDK_HOME = 'C:\Program Files\Huawei\DevEco Studio\sdk'
-$env:NODE_HOME      = 'C:\Program Files\Huawei\DevEco Studio\tools\node'
-& 'C:\Program Files\Huawei\DevEco Studio\tools\hvigor\bin\hvigorw.bat' `
+$env:DEVECO_SDK_HOME = 'D:\Program Files\Huawei\DevEco Studio\sdk'
+$env:NODE_HOME      = 'D:\Program Files\Huawei\DevEco Studio\tools\node'
+& 'D:\Program Files\Huawei\DevEco Studio\tools\hvigor\bin\hvigorw.bat' `
   --mode module -p product=default -p buildMode=debug assembleHap
 ```
 
@@ -113,7 +126,7 @@ code:9568423 ... the device is unauthorized, make sure the UDID of your device i
 或手动：
 
 ```powershell
-$hdc = 'C:\Program Files\Huawei\DevEco Studio\sdk\default\openharmony\toolchains\hdc.exe'
+$hdc = 'D:\Program Files\Huawei\DevEco Studio\sdk\default\openharmony\toolchains\hdc.exe'
 & $hdc install -r .\entry\build\default\outputs\default\entry-default-signed.hap
 & $hdc shell "aa start -a EntryAbility -b com.yiertongchuan.interpreter"
 ```

@@ -1,10 +1,17 @@
-param(
+﻿param(
   [string]$BundleName = 'com.yiertongchuan.interpreter'
 )
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
-$hdc = 'C:\Program Files\Huawei\DevEco Studio\sdk\default\openharmony\toolchains\hdc.exe'
+$candidates = @(
+  $env:DEVECO_HOME,
+  'D:\Program Files\Huawei\DevEco Studio',
+  'C:\Program Files\Huawei\DevEco Studio'
+) | Where-Object { $_ }
+$deveco = $candidates | Where-Object { Test-Path (Join-Path $_ 'sdk\default\openharmony\toolchains\hdc.exe') } | Select-Object -First 1
+if (-not $deveco) { throw '未找到 DevEco Studio 的 hdc.exe，请设置 DEVECO_HOME。' }
+$hdc = Join-Path $deveco 'sdk\default\openharmony\toolchains\hdc.exe'
 $hap = Join-Path $root 'entry\build\default\outputs\default\entry-default-signed.hap'
 
 if (-not (Test-Path $hap)) {
