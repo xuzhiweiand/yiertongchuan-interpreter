@@ -5,6 +5,14 @@
 
 > 当前版本：v0.2（中 ↔ 英）。英文识别走百度短语音，其余保持离线 / 可插拔。
 
+## 代码仓库
+
+GitHub：<https://github.com/xuzhiweiand/yiertongchuan-interpreter>
+
+- 默认分支：`main`
+- 远程：`git@github.com:xuzhiweiand/yiertongchuan-interpreter.git`
+- 归档时使用 SSH；当前网络如无法访问 GitHub，先本地提交，网络恢复后执行 `git push -u origin main`。
+
 ## 已实现
 
 - **双向同传**：顶部一键切换「中 → 英 / 英 → 中」，翻译、音色、字幕顺序同步切换。
